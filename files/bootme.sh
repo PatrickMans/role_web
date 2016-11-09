@@ -65,7 +65,7 @@ echo "Preparing modules"
 /opt/puppetlabs/puppet/bin/rake spec_prep
 
 # copy to puppet module location
-cp -a /root/role_appl/spec/fixtures/modules/* $MODULEDIR
+cp -a /root/role_web/spec/fixtures/modules/* $MODULEDIR
 
 echo "Run puppet apply"
 /usr/local/bin/puppet apply -e "include role_web"
