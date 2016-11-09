@@ -43,18 +43,18 @@ fi
 apt-get install git bundler zlib1g-dev libaugeas-ruby -y -q || yum install -y git bundler zlib-devel
 
 # get or update repo
-if [ -d /root/role_appl ]; then
+if [ -d /root/role_web ]; then
   echo "Update repo"
-  cd /root/role_appl
+  cd /root/role_web
   git pull
 else
   echo "Cloning repo"
-  git clone https://github.com/relybv/dirict-role_appl.git /root/role_appl
+  git clone https://github.com/PatrickMans/role_web.git /root/role_web
   cd /root/role_appl
 fi
 
 # install puppet
-bash /root/role_appl/files/bootstrap.sh $PUPPETMAJOR
+bash /root/role_web/files/bootstrap.sh $PUPPETMAJOR
 
 # prepare bundle
 echo "Installing gems"
@@ -68,4 +68,4 @@ echo "Preparing modules"
 cp -a /root/role_appl/spec/fixtures/modules/* $MODULEDIR
 
 echo "Run puppet apply"
-/usr/local/bin/puppet apply -e "include role_appl"
+/usr/local/bin/puppet apply -e "include role_web"
