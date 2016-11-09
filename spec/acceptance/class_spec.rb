@@ -7,14 +7,14 @@ else
   set :backend, :exec
 end
 
-describe 'role_appl class' do
+describe 'role_web class' do
 
   context 'default parameters' do
     if ENV['BEAKER'] == 'true'
       # Using puppet_apply as a helper
       it 'should work idempotently with no errors' do
         pp = <<-EOS
-        class { 'role_appl': }
+        class { 'role_web': }
         EOS
 
         # Run it twice and test for idempotency
