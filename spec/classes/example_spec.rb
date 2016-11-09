@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'role_appl' do
+describe 'role_web' do
   context 'supported operating systems' do
     on_supported_os.each do |os, facts|
       context "on #{os}" do
@@ -10,11 +10,11 @@ describe 'role_appl' do
           })
         end
 
-        context "role_appl class without any parameters" do
+        context "role_web class without any parameters" do
           let(:params) {{ }}
 
           it { is_expected.to compile.with_all_deps }
-          it { is_expected.to contain_class('role_appl') }
+          it { is_expected.to contain_class('role_web') }
        
           it { is_expected.to contain_class('profile_base') }
 
