@@ -1,11 +1,11 @@
 {
-  "name": "dirict-role_appl",
+  "name": "rely_web_demo",
   "version": "0.1.0",
-  "author": "P. Gomersbach",
+  "author": "P. Mans",
   "summary": "Custom application server",
   "license": "Apache 2.0",
-  "source": "https://github.com/relybv/dirict-role_appl.git",
-  "project_page": "https://github.com/relybv/dirict-role_appl",
+  "source": "https://github.com/PatrickMans/role_web.git",
+  "project_page": "https://github.com/PatrickMans/role_web.git",
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
