@@ -1,11 +1,11 @@
-# == Class: role_appl
+# == Class: role_web
 #
-# Full description of class role_appl here.
+# Web server install
 #
 # === Parameters
 #
 #
-class role_appl
+class role_web
 {
   # a role includes one or more profiles and at least a 'base' profile
   include ::profile_base
