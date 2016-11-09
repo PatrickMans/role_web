@@ -50,7 +50,7 @@ if [ -d /root/role_web ]; then
 else
   echo "Cloning repo"
   git clone https://github.com/PatrickMans/role_web.git /root/role_web
-  cd /root/role_appl
+  cd /root/role_web
 fi
 
 # install puppet
